@@ -1,0 +1,198 @@
+.editor-header {
+  width: 4%;
+  height: 774px;
+  margin-left: -7.7%;
+  border: 1px solid black;
+  margin-top: -7px;
+}
+
+.editor-body {
+  width: 91%;
+  height: 460px;
+  margin-left: 6.5%;
+}
+
+.editor-footer {
+  width: 95%;
+  height:50px;
+  margin-left: 2.5%;
+  border:1px solid blue;
+}
+
+.editor-buttons-container {
+  width: 30%;
+  height: 50px;
+  position: relative;
+}
+
+.text-button {
+  background: url('/image/custom-toolbar.png') no-repeat;
+  background-position: -7px;
+  height: 28px;
+  width: 37px;
+  padding-top: 30px;
+}
+
+.app-text {
+  font-size: 26px;
+}
+
+.image-button {
+  background: url('/image/custom-toolbar.png') no-repeat;
+  height: 28px;
+  width: 37px;
+  background-position: 25%;
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+.image-editor-body {
+  background: url('/image/image-modal.png') no-repeat;
+  height: 45%;
+  width: 48%;
+  position: absolute;
+  top: 10%;
+  right: 25%;
+  background-position-x: 105%;
+  background-position-y: 2%;
+
+}
+
+.text-editor-body {
+  border: 1px solid gray;
+  position: absolute;
+  top: 1%;
+  width: 90%;
+  right: 3%;
+  height: 460px;
+  overflow: hidden;
+}
+
+.text-to-edit-container {
+  text-align: left;
+  border: 1px solid black;
+  margin: 10px 26px 10px 10px;
+  height: auto;
+  padding-left: 10px;
+  padding-right: 25px;
+}
+
+.app-text {
+  margin-top: 15px;
+}
+
+.paragraph-container {
+  position: absolute;
+  top: 60%;
+  width: 90%;
+  margin-left: 10px;
+  font-size: 20px;
+
+}
+
+.text-input-button {
+  width: 125px;
+  height: 35px;
+  border: 1px solid black;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.app-model-phrase-input {
+  height: 50px;
+  width: 300px;
+  font-size: 26px;
+}
+
+.save-button-text {
+  margin-top: 5px;
+}
+
+div.tooltips {
+  position: relative;
+}
+
+div.tooltips span {
+  position: absolute;
+  width: 140px;
+  color: #FFFFFF;
+  background: #000000;
+  height: 35px;
+  line-height: 17px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 6px
+}
+
+div.tooltips span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -8px;
+  width: 0; height: 0;
+  border-right: 8px solid #000000;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+div:hover.tooltips span {
+  visibility: visible;
+  opacity: 0.8;
+  left: 100%;
+  top: 50%;
+  margin-top: -15px;
+  margin-left: 15px;
+  z-index: 999;
+}
+
+
+.dropzone {
+  opacity: .4;
+  height: 312px;
+}
+
+.dz-started {
+  opacity:1;
+}
+
+.resize-drag {
+ box-sizing: border-box;
+}
+
+
+.preview {
+  position: absolute;
+  width: 45%;
+  height: 200px;
+  right: 42px;
+  top: 60px;
+}
+
+.add-file-button-container {
+  width: 150px;
+  height: 40px;
+  margin-right: 1px;
+  margin-top: -38px;
+  float: right;
+}
+
+.add-file-button {
+  width: 100%;
+  height: 37px;
+}
+
+.thumbnail-container {
+  height: 125px;
+  width: 1250px;
+  margin-left: -224px;
+  margin-top: 40px;
+}
+
+.thumbnail {
+  border: 1px solid black;
+  width: 250px;
+  height: 120px;
+  margin-left: 27px;
+  display: inline-block;
+}

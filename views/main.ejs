@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"> <title>Site</title>
+
+    <base href="/">
+
+    <link rel="stylesheet" href="css/editorCSS.css">
+    <link rel="stylesheet" href="node_modules/dropzone/dist/dropzone.css">
+    <link rel="stylesheet" href="bower_components/ngContextMenu/dist/ngContextMenu.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="directives/toolTipDirective.js"></script>
+    <script src="controllers/appController.js"></script>
+    <script src="controllers/rightClickController.js"></script>
+    <script src="node_modules/dropzone/dist/dropzone.js"></script>
+    <script src="node_modules/interact.js/dist/interact.js"></script>
+    <script src="bower_components/ngContextMenu/dist/ngContextMenu.js"></script>
+  </head>
+
+  <body ng-app="siteApp" ng-controller="appController as app" class='keypressEvents'>
+
+    <div class="editor-body">
+      <div class="editor-header">
+        <div class="editor-buttons-container">
+          <div class="text-button tooltips" tooltip="Opens the message text box" ng-click="app.showImageEditor = false; app.showTextEditor = true;"></div>
+          <div class="image-button tooltips" tooltip="Opens the image insertion dialog" ng-click="app.showImageEditor = true; app.showTextEditor = false;"></div>
+        </div>
+      </div>
+
+      <div class="text-editor-body" ng-show="app.showTextEditor == true;">
+        <div class="editBox" draggable>
+          <div class="text-to-edit-container" contextmenu menu-list="app.textFunctionList" click-menu="app.textClickMenu(item)" save-content="classic-html" ng-show="app.textInput == false && app.showText == true; ">
+            <p class="app-text">{{app.txt}}</p>
+          </div>
+
+          <div class="input" ng-show="app.textInput == true;">
+            <input type="text" ng-model="app.model.phrase" class="app-model-phrase-input">
+            <div ng-click="app.changeText(app.model.phrase)" class="text-input-button"><p class="save-button-text">Save</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="paragraph-container" ng-show="app.showTextEditor == true;">
+        <p ng-mouseup="app.showSelectedText()">{{app.sampleParagraph}}</p>
+      </div>
+
+      <div class="image-editor-body" ng-show="app.showImageEditor == true;">
+        <form action="/file-upload" class="dropzone" id="my-awesome-dropzone" contextmenu menu-list="app.functionList" click-menu="app.clickMenu(item)" save-content="classic-html"></form>
+
+        <div class="add-file-button-container">
+          <button class="add-file-button">Upload File</button>
+        </div>
+
+        <div class="thumbnail-container">
+          <div class="thumbnail dropzone" draggable  contextmenu menu-list="app.functionList" click-menu="app.clickMenu(item)" save-content="classic-html" ></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
